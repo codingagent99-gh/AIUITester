@@ -1,12 +1,16 @@
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 
 class StepResult(BaseModel):
-    step: str
-    status: str
-    error: Optional[str]
+    step: Dict[str, Any]  # Changed from str to Dict
+    status: str  # "success", "failed", "skipped"
+    error: Optional[str] = None
+    screenshot: Optional[str] = None
+    data: Optional[Any] = None
 
 class TestReport(BaseModel):
     test_name: str
+    status: str
     steps: List[StepResult]
-    final_status: str
+    summary: str
+    timestamp: str
