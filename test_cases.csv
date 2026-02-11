@@ -1,0 +1,4 @@
+test_case_number,test_case_name,priority,category,input,expected_actions
+TC_001,Simple Navigation,High,Smoke Test,open google.com,navigate
+TC_002,Navigation with Extract,High,Data Extraction,open github.com and list repositories,"""navigate,extract"""
+TC_003,Search Flow,Medium,User Interaction,navigate to amazon.com search for books,"""navigate,type"""

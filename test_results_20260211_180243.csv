@@ -1,0 +1,11 @@
+Test_ID,Test_Case_Name,Test_Category,Test_Priority,Test_Input,Expected_Actions,Step_Number,Step_Action,Step_Target,Step_Value,Step_Status,Step_Result,Execution_Time_Sec,Extracted_Data_Preview,Extracted_Data_Count,Error_Message,Error_Type,Screenshot_Path,Overall_Test_Status,Test_Summary,Total_Steps,Passed_Steps,Failed_Steps,Test_Start_Time,Test_End_Time,Miscellaneous_Notes
+TC_001,Simple Navigation,Smoke Test,High,open google.com,navigate,1,navigate,google.com,,success,✅ PASS,7.47,,,,,,SUCCESS,"Total steps: 1, Passed: 1, Failed: 0, Skipped: 0",1,1,0,2026-02-11 18:02:43,2026-02-11 18:02:50,Expected: navigate | ✓ Action matched expected
+TC_002,Navigation with Extract,Data Extraction,High,open github.com and list repositories,"""navigate, extract""",1,navigate,github.com,,success,✅ PASS,3.01,,,,,,SUCCESS,"Total steps: 2, Passed: 2, Failed: 0, Skipped: 0",2,2,0,2026-02-11 18:02:50,2026-02-11 18:02:56,"Expected: ""navigate, extract"""
+TC_002,Navigation with Extract,Data Extraction,High,open github.com and list repositories,"""navigate, extract""",2,extract,repositories,,success,✅ PASS,3.01,"[""Skip to content\nNavigation Menu\nPlatform\nSolutions\nResources\nOpen Source\nEnterprise\nPricing",1,,,,SUCCESS,,,,,,,
+TC_003,Search Flow,User Interaction,Medium,navigate to amazon.com search for books,"""navigate, type""",1,navigate,amazon.com,,success,✅ PASS,17.87,,,,,,FAILED,"Total steps: 2, Passed: 1, Failed: 1, Skipped: 0",2,1,1,2026-02-11 18:02:56,2026-02-11 18:03:32,"Expected: ""navigate, type"""
+TC_003,Search Flow,User Interaction,Medium,navigate to amazon.com search for books,"""navigate, type""",2,type,books,,failed,❌ FAIL,17.87,,,"Page.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator(""books"")
+    - waiting for"" https://www.amazon.com/"" navigation to finish...
+    - navigated to ""https://www.amazon.com/""
+",Timeout,,FAILED,,,,,,,
